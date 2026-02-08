@@ -1,7 +1,7 @@
-import { initGame, gameLoop, setMute, customizeBall, startMultiplayerGame } from './game.js';
-import { renderStatsPanel } from './statistics.js';
-import { startTutorial } from './tutorial.js';
-import { achievements } from './achievements.js';
+import { initGame, gameLoop, setMute, customizeBall, startMultiplayerGame } from './game.js?v=20260208';
+import { renderStatsPanel } from './statistics.js?v=20260208';
+import { startTutorial } from './tutorial.js?v=20260208';
+import { achievements } from './achievements.js?v=20260208';
 
 initGame();
 gameLoop();

@@ -1,13 +1,13 @@
 // This module handles loading levels and everything related to level management
 
-import { ball } from './ball.js';
-import { hole } from './hole.js';
-import { levels } from './levels.js';
-import { gameState } from './gameState.js';
-import { weatherEffects } from './weather.js';
-import { renderLeaderboard } from './leaderboard.js';
-import { renderStatsPanel } from './statistics.js';
-import { updateMultiplayerUI } from './multiplayerUI.js';
+import { ball } from './ball.js?v=20260208';
+import { hole } from './hole.js?v=20260208';
+import { levels } from './levels.js?v=20260208';
+import { gameState } from './gameState.js?v=20260208';
+import { weatherEffects } from './weather.js?v=20260208';
+import { renderLeaderboard } from './leaderboard.js?v=20260208';
+import { renderStatsPanel } from './statistics.js?v=20260208';
+import { updateMultiplayerUI } from './multiplayerUI.js?v=20260208';
 
 const canvas = document.getElementById('gameCanvas');
 

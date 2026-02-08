@@ -1,10 +1,10 @@
 // This module handles all game events and user interactions
 
-import { ball } from './ball.js';
-import { gameState, sounds } from './gameState.js';
-import { loadLevel } from './levelManager.js';
-import { renderLeaderboard } from './leaderboard.js';
-import { renderStatsPanel } from './statistics.js';
+import { ball } from './ball.js?v=20260208';
+import { gameState, sounds } from './gameState.js?v=20260208';
+import { loadLevel } from './levelManager.js?v=20260208';
+import { renderLeaderboard } from './leaderboard.js?v=20260208';
+import { renderStatsPanel } from './statistics.js?v=20260208';
 
 const canvas = document.getElementById('gameCanvas');
 

@@ -1,11 +1,11 @@
 // This module handles game updates and the main game loop
 
-import { ball } from './ball.js';
-import { hole } from './hole.js';
-import { gameState, sounds, updateParticles } from './gameState.js';
-import { handleCollisions, checkWaterHazards, checkSandBunkers } from './collisions.js';
-import { weatherEffects } from './weather.js';
-import { showHoleCompleteScreen } from './gameUI.js';
+import { ball } from './ball.js?v=20260208';
+import { hole } from './hole.js?v=20260208';
+import { gameState, sounds, updateParticles } from './gameState.js?v=20260208';
+import { handleCollisions, checkWaterHazards, checkSandBunkers } from './collisions.js?v=20260208';
+import { weatherEffects } from './weather.js?v=20260208';
+import { showHoleCompleteScreen } from './gameUI.js?v=20260208';
 
 export function update() {
     // Update particles

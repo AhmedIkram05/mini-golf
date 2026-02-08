@@ -1,13 +1,13 @@
 // This module handles game UI components and screens
 
-import { gameState } from './gameState.js';
-import { handleMultiplayerTurnEnd } from './multiplayerUI.js';
-import { loadLevel } from './levelManager.js';
-import { multiplayer } from './multiplayer.js';
-import { achievements } from './achievements.js';
-import { saveScore, renderLeaderboard } from './leaderboard.js';
-import { savePlayerStats, renderStatsPanel } from './statistics.js';
-import { showGameSummary, showMultiplayerGameSummary } from './ui.js';
+import { gameState } from './gameState.js?v=20260208';
+import { handleMultiplayerTurnEnd } from './multiplayerUI.js?v=20260208';
+import { loadLevel } from './levelManager.js?v=20260208';
+import { multiplayer } from './multiplayer.js?v=20260208';
+import { achievements } from './achievements.js?v=20260208';
+import { saveScore, renderLeaderboard } from './leaderboard.js?v=20260208';
+import { savePlayerStats, renderStatsPanel } from './statistics.js?v=20260208';
+import { showGameSummary, showMultiplayerGameSummary } from './ui.js?v=20260208';
 
 export function showHoleCompleteScreen(levelIndex, parScore, strokesUsed) {
     // Check for hole in one achievement

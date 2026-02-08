@@ -1,19 +1,19 @@
 // This is the main game controller that coordinates all game modules
 
-import { ball } from './ball.js';
-import { hole } from './hole.js';
-import { levels } from './levels.js';
-import { gameState, sounds } from './gameState.js';
-import { weatherEffects } from './weather.js';
-import { achievements } from './achievements.js';
-import { renderGame } from './rendering.js';
-import { createModal } from './ui.js';
-import { setupEventListeners } from './eventHandlers.js';
-import { loadLevel } from './levelManager.js';
-import { update } from './gameUpdate.js';
-import { createMultiplayerUI, updateMultiplayerUI } from './multiplayerUI.js';
-import { multiplayer } from './multiplayer.js';
-import { powerups } from './powerups.js';
+import { ball } from './ball.js?v=20260208';
+import { hole } from './hole.js?v=20260208';
+import { levels } from './levels.js?v=20260208';
+import { gameState, sounds } from './gameState.js?v=20260208';
+import { weatherEffects } from './weather.js?v=20260208';
+import { achievements } from './achievements.js?v=20260208';
+import { renderGame } from './rendering.js?v=20260208';
+import { createModal } from './ui.js?v=20260208';
+import { setupEventListeners } from './eventHandlers.js?v=20260208';
+import { loadLevel } from './levelManager.js?v=20260208';
+import { update } from './gameUpdate.js?v=20260208';
+import { createMultiplayerUI, updateMultiplayerUI } from './multiplayerUI.js?v=20260208';
+import { multiplayer } from './multiplayer.js?v=20260208';
+import { powerups } from './powerups.js?v=20260208';
 
 // Initialize values that other modules will need access to
 window.levels = levels;

@@ -1,4 +1,4 @@
-import { achievements } from './achievements.js';
+import { achievements } from './achievements.js?v=20260208';
 
 export function handleCollisions(ball, obstacles, playSound, hitSound) {
     let collision = false;

@@ -1,7 +1,7 @@
 // This is the main entry point that re-exports key functionality
 
-import { initGameCore, gameLoop, setIsMuted, startMultiplayer } from './gameCore.js';
-import { ball } from './ball.js';
+import { initGameCore, gameLoop, setIsMuted, startMultiplayer } from './gameCore.js?v=20260208';
+import { ball } from './ball.js?v=20260208';
 
 // Re-export main game functions
 export { initGameCore as initGame, gameLoop };
