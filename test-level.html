@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Golf - Test Level</title>
+    
+    <!-- Add Tailwind CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Ensure the game container expands to full viewport height but allows scrolling */
+        #game-container {
+            min-height: 100vh;
+        }
+    </style>
+</head>
+<body>
+    <div id="game-container" class="w-full flex flex-col bg-gray-100">
+        
+        <!-- Header -->
+        <header class="w-full flex items-center justify-between px-6 py-4 bg-green-100 shadow">
+            <div class="flex items-center">
+                <a href="editor.html" class="mr-4 text-green-700 hover:text-green-900">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                    </svg>
+                </a>
+                <h1 class="text-3xl font-medium">Test Level</h1>
+            </div>
+            <div class="flex items-center space-x-6">
+                <div id="score" class="text-xl">Score: 0</div>
+                <div id="par" class="text-xl">Par: --</div>
+                <div id="currentHole" class="text-xl">Hole: 1</div>
+                <button id="resetButton" class="bg-green-700 text-white py-2 px-4 rounded hover:bg-green-800" aria-label="Reset game">Reset Game</button>
+            </div>
+        </header>
+        
+        <!-- Main Content -->
+        <main class="relative flex-grow flex justify-center items-center">
+            
+            <!-- Left-side UI elements -->
+            <div class="fixed left-6 top-24 flex flex-col space-y-6">
+                <!-- Stats panel -->
+                <div id="stats" class="bg-white bg-opacity-90 p-4 rounded shadow-md w-64"></div>
+                
+                <!-- Achievements panel -->
+                <div id="achievements" class="bg-white bg-opacity-90 p-4 rounded shadow-md w-64"></div>
+            </div>
+            
+            <!-- Vertical Power Slider positioned far to the left of the course -->
+            <div id="verticalPowerSlider" class="fixed flex flex-col items-center" style="left: 300px;">
+                <div class="mb-24 text-lg font-medium">Power</div>
+                <input type="range" id="powerSlider" min="1" max="10" value="10" class="transform -rotate-90 w-48">
+            </div>
+            
+            <!-- Golf course container with grass green background -->
+            <div id="golf-course" class="relative w-[800px] h-[600px] bg-green-500 rounded-lg border-4 border-white overflow-hidden">
+                <canvas id="gameCanvas" width="800" height="600"></canvas>
+            </div>
+            
+            <!-- Leaderboard as a fixed sidebar on the right -->
+            <div id="leaderboard" class="fixed top-24 right-6 bg-white bg-opacity-90 p-4 rounded shadow-md w-64"></div>
+        </main>
+        
+        <!-- Game controls positioned at the bottom center -->
+        <div class="fixed bottom-6 left-1/2 transform -translate-x-1/2 flex space-x-4 z-10">
+            <button id="muteBtn" class="bg-gray-700 text-white py-2 px-4 rounded hover:bg-gray-800" aria-label="Toggle sound">🔊</button>
+            <button id="rulesBtn" class="bg-blue-700 text-white py-2 px-4 rounded hover:bg-blue-800" aria-label="View game rules">Rules</button>
+            <button id="customizeBtn" class="bg-purple-700 text-white py-2 px-4 rounded hover:bg-purple-800" aria-label="Customize ball appearance">Customize Ball</button>
+        </div>
+    </div>
+    
+    <!-- Audio elements -->
+    <audio id="hitSound" src="sounds/hit.wav" preload="auto"></audio>
+    <audio id="holeSound" src="sounds/hole.mp3" preload="auto"></audio>
+    
+    <script type="module" src="js/test-level.js"></script>
+    <!-- Single-player script reads the seeded levels array from test-level.js. -->
+    <script type="module" src="js/single-player.js"></script>
+</body>
+</html>

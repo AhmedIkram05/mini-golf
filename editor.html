@@ -101,9 +101,34 @@
                 levelsList.innerHTML = '<p class="text-gray-500 col-span-3">No custom levels saved yet. Create and save a level to see it here.</p>';
             } else {
                 levelsList.innerHTML = '';
+                const selectLevel = (index) => {
+                    const level = savedLevels[index];
+                    if (!level) {
+                        console.warn(`Level index ${index} not found in saved levels (total: ${savedLevels.length})`);
+                        return;
+                    }
+                    levelEditor.loadLevel(level);
+                    document.getElementById('levelName').value = level.name || 'Custom Level';
+                    document.getElementById('levelPar').value = level.par || 3;
+                    document.getElementById('bgColor').value = level.theme?.background || '#69b578';
+                    document.getElementById('borderColor').value = level.theme?.borderColor || '#2d6a4f';
+                    document.querySelector('.editor-canvas-container').style.borderColor = level.theme?.borderColor || '#2d6a4f';
+                    
+                    document.querySelectorAll('.level-card').forEach(card => {
+                        card.classList.remove('border-blue-500');
+                        card.classList.add('border-transparent');
+                    });
+                    const selectedCard = document.querySelector(`.level-card[data-index="${index}"]`);
+                    if (selectedCard) {
+                        selectedCard.classList.remove('border-transparent');
+                        selectedCard.classList.add('border-blue-500');
+                    }
+                };
+                
                 savedLevels.forEach((level, index) => {
                     const levelCard = document.createElement('div');
-                    levelCard.className = 'bg-white p-4 rounded shadow';
+                    levelCard.className = 'level-card bg-white p-4 rounded shadow border-2 border-transparent';
+                    levelCard.dataset.index = index;
                     levelCard.innerHTML = `
                         <h3 class="font-bold">${level.name}</h3>
                         <p class="text-sm">Par: ${level.par}</p>
@@ -119,7 +144,7 @@
                 document.querySelectorAll('.load-level').forEach(btn => {
                     btn.addEventListener('click', function() {
                         const index = parseInt(this.getAttribute('data-index'));
-                        levelEditor.loadLevel(savedLevels[index]);
+                        selectLevel(index);
                     });
                 });
                 
