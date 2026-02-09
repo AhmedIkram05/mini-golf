@@ -1,8 +1,8 @@
 // This module handles multiplayer UI components
 
-import { ball } from './ball.js';
-import { gameState } from './gameState.js';
-import { multiplayer } from './multiplayer.js';
+import { ball } from './ball.js?v=20260208';
+import { gameState } from './gameState.js?v=20260208';
+import { multiplayer } from './multiplayer.js?v=20260208';
 
 export function createMultiplayerUI() {
     // Create container for player turn display

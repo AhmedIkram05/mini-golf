@@ -1,5 +1,5 @@
-import { initGame, gameLoop, setMute, customizeBall, startMultiplayerGame } from './game.js';
-import { achievements } from './achievements.js';
+import { initGame, gameLoop, setMute, customizeBall, startMultiplayerGame } from './game.js?v=20260208';
+import { achievements } from './achievements.js?v=20260208';
 
 document.addEventListener('DOMContentLoaded', function() {
     // Initialize game

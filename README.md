@@ -22,6 +22,8 @@ The project consists of the following files and directories:
 
 To run the game, simply open the `index.html` file in any modern web browser. No additional setup is required.
 
+If you change JavaScript or CSS files, update the `v=` query string on asset references (for example, `styles.css?v=20260208`) so browsers fetch the latest versions.
+
 ## Contributing
 
 Feel free to contribute to this project by adding new features, improving visuals, or enhancing the game mechanics. Pull requests are welcome!
