@@ -4,7 +4,7 @@ A browser-based 2D mini-golf game built with vanilla JavaScript and HTML5 Canvas
 
 ## 📸 Screenshot
 
-![2D Mini-Golf gameplay](assets/images/screenshot.png)
+![2D Mini-Golf gameplay](images/screenshot.png)
 
 ## 🧠 Tech Stack
 
