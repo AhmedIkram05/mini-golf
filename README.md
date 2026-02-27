@@ -1,33 +1,54 @@
-# 2D Mini-Golf Game
+# 2D Mini-Golf Game ⛳
 
-Welcome to the 2D Golf Game project! This game allows you to play a simple golf game with a single hole. Below are the details on how to set up and play the game.
+A browser-based 2D mini-golf game built with vanilla JavaScript and HTML5 Canvas. Use your mouse to aim, set your power, and sink the ball in as few strokes as possible.
 
-## Project Structure
+## 📸 Screenshot
 
-The project consists of the following files and directories:
+![2D Mini-Golf gameplay](assets/images/screenshot.png)
 
-- `index.html`: The main HTML document that sets up the structure of the game.
-- `styles.css`: Contains styles for the game, including layout, colors, fonts, and visual elements.
-- `script.js`: Implements the game logic, including player interactions and game mechanics.
-- `assets/images`: Directory containing visual assets such as backgrounds, golf balls, and holes.
-- `assets/sounds`: Directory containing sound effect files used in the game.
+## 🧠 Tech Stack
 
-## How to Play
+- **HTML5 Canvas** — Game rendering and animation loop
+- **CSS3** — Layout and UI styling
+- **JavaScript (ES6)** — Game physics, collision detection, input handling, and state management
+- **Web Audio API** — Sound effects for shots and ball interactions
 
-1. Open the `index.html` file in your web browser.
-2. Use the mouse to aim and click to hit the golf ball towards the hole.
-3. Try to complete the hole in the fewest strokes possible!
+## 🎮 How to Play
 
-## Setup Instructions
+1. **Aim** — Move your mouse to set the shot direction
+2. **Power** — Click and hold to charge your shot; release to hit
+3. **Objective** — Get the ball into the hole in as few strokes as possible
 
-To run the game, simply open the `index.html` file in any modern web browser. No additional setup is required.
+## ✨ Features
 
-If you change JavaScript or CSS files, update the `v=` query string on asset references (for example, `styles.css?v=20260208`) so browsers fetch the latest versions.
+- Ball physics with velocity, friction, and boundary collision
+- Mouse-based aim and power system with visual feedback
+- Stroke counter with par tracking
+- Sound effects via Web Audio API
+- Responsive canvas scaling for different screen sizes
 
-## Contributing
+## 📁 Project Structure
 
-Feel free to contribute to this project by adding new features, improving visuals, or enhancing the game mechanics. Pull requests are welcome!
+```
+2d-mini-golf/
+├── index.html        # Game entry point
+├── styles.css        # Layout and UI styles
+├── script.js         # Game logic, physics, and input handling
+└── assets/
+    ├── images/       # Background and UI assets
+    └── sounds/       # Sound effect files
+```
 
-## License
+## 🧪 How to Run
 
-This project is open-source and available under the MIT License.
+No installation required — open `index.html` directly in any modern browser, or serve locally:
+
+```bash
+git clone https://github.com/AhmedIkram05/2d-mini-golf.git
+cd 2d-mini-golf
+python3 -m http.server 8000
+```
+
+Then visit `http://localhost:8000`.
+
+> **Note:** If you update any JS or CSS files, bump the `v=` query string on asset references in `index.html` to force browsers to fetch the latest version (e.g. `styles.css?v=2`).
